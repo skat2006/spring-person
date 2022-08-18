@@ -20,7 +20,7 @@ public class WebEmployeeController {
 
     @GetMapping
     public String addForm(Model model) {
-        model.addAttribute("employee", new Employee(null, null));
+        model.addAttribute("employee", new Employee(null, null, null,null));
         return "employee";
     }
 

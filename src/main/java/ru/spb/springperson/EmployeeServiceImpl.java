@@ -7,6 +7,7 @@ import ru.spb.springperson.exeptions.EmployeeStorageIsFullException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -24,6 +25,12 @@ public class EmployeeServiceImpl implements EmployeeService {
             return employee;
         }
     }
+
+/*    public String getEmployeesByDepartment() {
+        Map<String, List<Employee>> getEmployeesByDepartment = employeesList.stream()
+                .collect(employee::getDepartment);
+        return getEmployeesByDepartment.toString();
+    }*/
 
     @Override
     public Employee deleteEmployee(Employee employee) throws EmployeeNotFoundException {
