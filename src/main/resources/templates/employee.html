@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Добавление пользователя</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style>
+        #add_form {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .form_item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="add_form">
+    <h1>Форма добавления:</h1>
+    <form action="#" th:action="@{/person/add}" th:object="${employee}" method="post">
+        <p>First name: <input class="form_item" type="text" th:field="*{firstName}"/></p>
+        <p>Last name: <input class="form_item" type="text" th:field="*{lastName}"/></p>
+        <p><input class="form_item" type="submit" value="Добавить человека"/> <input class="form_item" type="reset"
+                                                                                     value="Сброс"/></p>
+    </form>
+    <form action="#" th:action="@{/person/result}">
+        <input type="submit" value="Посмотреть список"/>
+    </form>
+</div>
+</body>
+</html>
